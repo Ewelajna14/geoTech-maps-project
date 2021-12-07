@@ -5,13 +5,18 @@ import '../App.css';
 function PointsForm(){
 const[show, setShow]=useState(true)
 
-function toggleButton(){
+function toggleButton(event){
     setShow(!show)
+    if(event.target.innerText==="Hide Form"){
+        event.target.innerText="Show Form"
+    }
+    else{
+        event.target.innerText="Hide Form"
+    }
 }
 
 return(
     <div class ="container">
-    
     {show? <form>
         <h2>Form</h2>
         <div class="wrapper">
