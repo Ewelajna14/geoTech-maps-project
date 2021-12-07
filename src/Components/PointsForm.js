@@ -4,6 +4,15 @@ import '../App.css';
 
 function PointsForm(){
 const[show, setShow]=useState(true)
+//form control state
+const[name, setName]=useState("")
+const[date, setDate]=useState("")
+const[elevation, setElevation]=useState("")
+const[description, setDescription]=useState("")
+const[properties, setProperties]=useState("")
+const[classification, setClassification]=useState("")
+const[counts, setCounts]=useState("")
+
 
 function toggleButton(event){
     setShow(!show)
@@ -21,44 +30,44 @@ return(
         <h2>Form</h2>
         <div class="wrapper">
             <div class="box">
-                <input type="text" name="name"/>
-                <label for="text">Name</label>
+                <input type="text" name="name" value={name} onChange={(event)=>setName(event.target.value)}/>
+                <label for="text">Borehole name</label>
             </div>
 
             <div class="box">
-                <input type="date" name="date"/>
+                <input type="date" name="date" value={date} onChange={(event)=>setDate(event.target.value)}/>
                 <label for="date">Date</label>
             </div>
 
             <div class="box">
-                <input type="text" name="elevation"/>
+                <input type="text" name="elevation" value={elevation} onChange={(event)=>setElevation(event.target.value)}/>
                 <label for="text">Ground Elevation</label>
             </div>
         </div>
 
             <div class="wrapper">
             <div class="box">
-                <textarea type="text" name="description"/>
+                <textarea type="text" name="description" value={description} onChange={(event)=>setDescription(event.target.value)}/>
                 <label for="text">Description</label>
             </div>
             </div>
 
             <div class="wrapper">
             <div class="box">
-                <textarea type="text" name="properties"/>
+                <textarea type="text" name="properties" value={properties} onChange={(event)=>setProperties(event.target.value)}/>
                 <label for="text">Properties</label>
             </div>
             </div>
 
             <div class="wrapper">
             <div class="box">
-                <input type="text" name="classification"/>
+                <input type="text" name="classification" value={classification} onChange={(event)=>setClassification(event.target.value)}/>
                 <label for="text">Classification</label>
             </div>
             
 
             <div class="box">
-                <input type="number" name="counts"/>
+                <input type="number" name="counts" value={counts} onChange={(event)=>setCounts(event.target.value)}/>
                 <label for="number">Blow Counts</label>
             </div>
             </div>
