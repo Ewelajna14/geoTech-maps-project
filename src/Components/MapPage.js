@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Map from './Map'
+import PointsForm from './PointsForm'
 
 function MapPage(){
 
@@ -11,11 +12,9 @@ function MapPage(){
     .then(data=>setPoints(data))
   }, [])
  
-
-  
-
     return(
       <div>
+        <PointsForm/>
         <Map points={points}/>
       </div>
     )
