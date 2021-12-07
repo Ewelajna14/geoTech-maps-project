@@ -1,68 +1,73 @@
 
-import React from 'react'
+import React, {useState} from 'react'
 import '../App.css';
 
 function PointsForm(){
-return(
-    <div class ="form-container">
-    <form class="form-inline">
-        <label for="text">Name</label>
-        <input
-        type="text"
-        name="name"
-        placeholder="Type borehole name"
-        />
-        <br/>
-        <label for="date">Date</label>
-        <input
-        type="date"
-        name="date"
-        placeholder="Type date"
-        />
-         <br/>
-         <label for="text">Ground Elevation </label>
-        <input
-        type="text"
-        name="elevation"
-        placeholder="Type elevation"
-        />
-        <br/>
-        <label for="text">Description</label>
-        <input
-        type="text"
-        name="description"
-        placeholder="Type description"
-        />
-        <br/>
-        <label for="text">Properties</label>
-        <input
-        type="text"
-        name="properties"
-        placeholder="Type properties"
-        />
-        <br/>
-        <label for="text">Classification</label>
-        <input
-        type="text"
-        name="classification"
-        placeholder="Type classification"
-        />
-        <br/>
-        <label for="number">Blow Counts</label>
-        <input
-        type="number"
-        name="blowcounts"
-        placeholder="Type blow counts"
-        />
-        <br/>
+const[show, setShow]=useState(true)
 
-        <input
-        type="submit"
-        name="submit"
-        value="Add New Point"
-        />
-    </form>
+function toggleButton(){
+    setShow(!show)
+}
+
+return(
+    <div class ="container">
+    
+    {show? <form>
+        <h2>Form</h2>
+        <div class="wrapper">
+            <div class="box">
+                <input type="text" name="name"/>
+                <label for="text">Name</label>
+            </div>
+
+            <div class="box">
+                <input type="date" name="date"/>
+                <label for="date">Date</label>
+            </div>
+
+            <div class="box">
+                <input type="text" name="elevation"/>
+                <label for="text">Ground Elevation</label>
+            </div>
+        </div>
+
+            <div class="wrapper">
+            <div class="box">
+                <textarea type="text" name="description"/>
+                <label for="text">Description</label>
+            </div>
+            </div>
+
+            <div class="wrapper">
+            <div class="box">
+                <textarea type="text" name="properties"/>
+                <label for="text">Properties</label>
+            </div>
+            </div>
+
+            <div class="wrapper">
+            <div class="box">
+                <input type="text" name="classification"/>
+                <label for="text">Classification</label>
+            </div>
+            
+
+            <div class="box">
+                <input type="number" name="counts"/>
+                <label for="number">Blow Counts</label>
+            </div>
+            </div>
+
+            
+            <div class="box">
+                <input type="submit" name="submit" value="Add new point"/>
+            </div>
+        
+         </form>:null}
+          
+            <button onClick={toggleButton}class="toggle-button">Hide Form</button>
     </div>
+    
 )
 
 }
