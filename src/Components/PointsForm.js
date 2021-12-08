@@ -2,7 +2,7 @@
 import React, {useState} from 'react'
 import '../App.css';
 
-function PointsForm(){
+function PointsForm({onAddPoint}){
 const[show, setShow]=useState(true)
 //form control state
 const[name, setName]=useState("")
@@ -36,7 +36,16 @@ headers:{
 body: JSON.stringify(newPoint),
 })
 .then((r)=>r.json())
-.then( data=>console.log(data))
+.then( newPoint=>onAddPoint(newPoint))
+setName("")
+setDate("")
+setElevation("")
+setDescription("")
+setProperties("")
+setClassification("")
+setCounts("")
+setLatitude("")
+setLongitude("")
 }
 
 

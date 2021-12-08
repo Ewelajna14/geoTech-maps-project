@@ -6,6 +6,10 @@ function MapPage(){
 
   const [points, setPoints]=useState([])
 
+  function handleAddPoint(newPoint){
+   setPoints([...points,newPoint ])
+  }
+
   useEffect(()=>{
     fetch("http://localhost:4000/mapsData")
     .then(r=>r.json())
@@ -14,7 +18,7 @@ function MapPage(){
  
     return(
       <div>
-        <PointsForm/>
+        <PointsForm onAddPoint={handleAddPoint}/>
         <Map points={points}/>
       </div>
     )
