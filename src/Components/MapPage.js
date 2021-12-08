@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Map from './Map'
 import PointsForm from './PointsForm'
+import InfoSection from './InfoSection';
 import '../App.css';
 
 function MapPage(){
@@ -19,6 +20,7 @@ function MapPage(){
  
     return(
       <div>
+        <InfoSection/>
         <PointsForm onAddPoint={handleAddPoint}/>
         <Map  class="leaflet-container" points={points}/>
       </div>
