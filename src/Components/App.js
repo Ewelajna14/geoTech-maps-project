@@ -1,16 +1,21 @@
 import React from 'react'
 import MapPage from './MapPage';
-import Header from "./Header"
-import '../App.css';
+import NavBar from "./NavBar.js";
+import styled from 'styled-components';
 
 
 function App() {
   return (
-    <div>
-    <Header/>
-     <MapPage class="leaflet-container"/>
-    </div>
+    <Body>
+    <NavBar/>
+     <MapPage/>
+    </Body>
   );
 }
 
 export default App;
+
+const Body = styled.div`
+
+background-color:white;
+`
