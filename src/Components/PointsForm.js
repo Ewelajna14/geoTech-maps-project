@@ -24,7 +24,8 @@ const newPoint={
     description:description,
     properties:properties,
     classification:classification,
-    blowCounts: counts
+    blowCounts: counts,
+    coordinates: [longitude, latitude ]
 }
 
 fetch("http://localhost:4000/mapsData", {
