@@ -12,6 +12,8 @@ const[description, setDescription]=useState("")
 const[properties, setProperties]=useState("")
 const[classification, setClassification]=useState("")
 const[counts, setCounts]=useState("")
+const[latitude, setLatitude]=useState("")
+const[longitude, setLongitude]=useState("")
 
 function handleSubmit(event){
 event.preventDefault()
@@ -87,11 +89,22 @@ return(
                 <input type="text" name="classification" value={classification} onChange={(event)=>setClassification(event.target.value)}/>
                 <label for="text">Classification</label>
             </div>
-            
-
+    
             <div class="box">
                 <input type="number" name="counts" value={counts} onChange={(event)=>setCounts(event.target.value)}/>
                 <label for="number">Blow Counts</label>
+            </div>
+            </div>
+
+            <div class="wrapper">
+            <div class="box">
+                <input type="number" name="latitude" value={latitude} onChange={(event)=>setLatitude(event.target.value)}/>
+                <label for="number">Latitude</label>
+            </div>
+    
+            <div class="box">
+                <input type="number" name="longitude" value={longitude} onChange={(event)=>setLongitude(event.target.value)}/>
+                <label for="number">Longitude</label>
             </div>
             </div>
 
