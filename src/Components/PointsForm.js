@@ -13,6 +13,29 @@ const[properties, setProperties]=useState("")
 const[classification, setClassification]=useState("")
 const[counts, setCounts]=useState("")
 
+function handleSubmit(event){
+event.preventDefault()
+const newPoint={
+    name:name,
+    date:date,
+    groundElevation:elevation,
+    description:description,
+    properties:properties,
+    classification:classification,
+    blowCounts: counts
+}
+
+fetch("http://localhost:4000/mapsData", {
+method: "POST",
+headers:{
+    "Content-Type": "application/json",    
+},
+body: JSON.stringify(newPoint),
+})
+.then((r)=>r.json())
+.then( data=>console.log(data))
+}
+
 
 function toggleButton(event){
     setShow(!show)
@@ -26,7 +49,7 @@ function toggleButton(event){
 
 return(
     <div class ="container">
-    {show? <form>
+    {show? <form onSubmit={handleSubmit}>
         <h2>Form</h2>
         <div class="wrapper">
             <div class="box">
