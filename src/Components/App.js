@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Route, Switch } from "react-router-dom";
+import {Route, Switch } from "react-router-dom";
 import MapPage from './MapPage';
 import NavBar from "./NavBar.js";
 import Contacts from './Contacts';
@@ -10,7 +10,7 @@ import styled from 'styled-components';
 
 function App() {
   return (
-    <BrowserRouter>
+    <div>
     <NavBar/>
     <Switch>
     <Body>
@@ -21,7 +21,7 @@ function App() {
      <Footer/> 
     </Body>
     </Switch>
-    </BrowserRouter>
+    </div>
   );
 }
 
