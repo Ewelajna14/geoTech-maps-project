@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components';
+import {BsTelephoneInbound } from 'react-icons/bs';
+import {MdOutlineEmail } from 'react-icons/md';
 
 function Contacts(){
     return(
         <Wrapper>
             <ContactRow>
                 <ContactColumn>
-                 <h3>Call Us: ( 111-111-1111)</h3>
-                 <h3>Send an Email: contact@contact.net</h3>
+                  <p><Icon/>Call Us: ( 111-111-1111)</p>
+                 <p><IconEmail/>Send an Email: contact@contact.net</p>
                 </ContactColumn>
             </ContactRow>
         </Wrapper>
@@ -28,7 +30,17 @@ grid-gap: 30px;
 
 const ContactColumn=styled.div`
 padding:30px;
-h3{
+p{
     color:white;
+    font-size:20px;
 }
+`
+
+const Icon = styled(BsTelephoneInbound)`
+margin-right: 0.5rem;
+margin-left: 1rem;
+`
+const IconEmail = styled(MdOutlineEmail)`
+margin-right: 0.5rem;
+margin-left: 1rem;
 `

@@ -22,13 +22,13 @@ function NavBar(){
             </NavElement> 
 
             <NavElement>
-            <NavLink to="/">
-             Maps
+            <NavLink to="/form">
+             Form
             </NavLink>
             </NavElement>
 
             <NavElement>  
-            <NavLink to="/">
+            <NavLink to="/contacts">
              Contacts
             </NavLink>
             </NavElement> 
