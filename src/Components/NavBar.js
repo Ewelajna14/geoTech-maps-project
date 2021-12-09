@@ -1,15 +1,40 @@
 import React from 'react'
 import styled from 'styled-components';
-import { FaMapMarkedAlt } from 'react-icons/fa';
+import {FaMapMarkedAlt } from 'react-icons/fa';
+import {NavLink} from "react-router-dom";
+
 
 function NavBar(){
     return(
+        <>
         <Wrapper>
             <Title>
                 <Icon/>
                 GeoTech Maps
             </Title>
-        </Wrapper>
+            </Wrapper>
+            <NavMenu>
+
+             <NavElement>  
+            <NavLink to="/">
+             Home
+            </NavLink>
+            </NavElement> 
+
+            <NavElement>
+            <NavLink to="/">
+             Maps
+            </NavLink>
+            </NavElement>
+
+            <NavElement>  
+            <NavLink to="/">
+             Contacts
+            </NavLink>
+            </NavElement> 
+
+            </NavMenu>
+            </>
     )
 }
 
@@ -22,7 +47,6 @@ display:flex;
 justify-content:left;
 align-items:center;
 
-
 `
 const Title=styled.h1`
 text-align: left;
@@ -32,4 +56,22 @@ color:white;
 const Icon = styled(FaMapMarkedAlt)`
 margin-right: 0.5rem;
 margin-left: 1rem;
+`
+
+const NavMenu=styled.div`
+display:flex;
+justify-content:left;
+background-color:#3A5A40;
+padding:5px;
+`
+
+const NavElement=styled.li`
+margin-right: 0.5rem;
+margin-left: 1rem;
+list-style-type: none;
+a {
+    text-decoration: none;
+    color: white;
+ }
+
 `
