@@ -21,8 +21,7 @@ function Map({points}){
 
     return(
         <div>
-        <LocationForm onSetLocation={handleLocationFormSubmit}/>
-         <h2> Find your points here</h2>    
+        <LocationForm onSetLocation={handleLocationFormSubmit}/>   
         <MapContainer center={location} zoom={13} scrollWheelZoom={false}>
         <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
