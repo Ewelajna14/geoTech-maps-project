@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { MapContainer, TileLayer} from 'react-leaflet'
 import Point from './Point'
 import LocationForm from './LocationForm'
@@ -6,11 +6,22 @@ import LocationForm from './LocationForm'
 //center={[41.64752113311525, -95.32354900194522]} 
 
 
-function Map({points, location}){
+function Map({points}){
+
+    const[location, setLocation] = useState(["41.64752113311525", "-95.32354900194522"])
+    
+
+    function handleLocationFormSubmit(newLocation){
+        setLocation(newLocation)
+        console.log(newLocation)
+        
+        }
+
+        let number=["41.972152", "-87.964213"]
 
     return(
         <div>
-        <LocationForm/>
+        <LocationForm onSetLocation={handleLocationFormSubmit}/>
          <h1> Find your points here</h1>    
         <MapContainer center={location} zoom={13} scrollWheelZoom={false}>
         <TileLayer
