@@ -17,5 +17,5 @@ export default App;
 
 const Body = styled.div`
 
-background-color:white;
+background-color:#dad7cd;
 `

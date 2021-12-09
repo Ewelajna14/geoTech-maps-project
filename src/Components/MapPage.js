@@ -19,12 +19,13 @@ function MapPage(){
   }, [])
  
     return(
-      <div>
+      <>
         <InfoSection/>
         <PointsForm onAddPoint={handleAddPoint}/>
         <Map  class="leaflet-container" points={points}/>
-      </div>
+      </>
     )
 }
 
 export default MapPage
+

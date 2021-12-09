@@ -16,12 +16,12 @@ function NavBar(){
 export default NavBar
 
 const Wrapper=styled.nav`
-background-image: url("header-4.png");
+background-color:#3A5A40;
 height:90px;
 display:flex;
 justify-content:left;
 align-items:center;
-margin-bottom:20px;
+
 
 `
 const Title=styled.h1`
