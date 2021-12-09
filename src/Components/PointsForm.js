@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import '../App.css';
 
 function PointsForm({onAddPoint}){
-const[show, setShow]=useState(true)
+const[show, setShow]=useState(false)
 //form control state
 const[name, setName]=useState("")
 const[date, setDate]=useState("")
@@ -125,7 +125,7 @@ return(
         
          </form>:null}
           
-            <button onClick={toggleButton}class="toggle-button">Hide Form</button>
+            <button onClick={toggleButton}class="toggle-button">Show Form</button>
     </div>
     
 )
