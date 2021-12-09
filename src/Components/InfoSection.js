@@ -6,10 +6,17 @@ function InfoSection(){
         <Section>
             <InfoRow>
                 <InfoColumn>
-                    <h4>Styled components have a similar style to SASS in terms of nesting. However, there are so many additional benefits of using styled components that you wouldn't be able to get from regular CSS.You can install styled components into your project with the following code.</h4>
+                    <h1>Welcome to GeoTech Maps</h1>
+                    <p> If you are looking for an App where you can track all of yours geotechnical data, together with displaying them on the map, you couldn't find better place! </p>
+                    <p>To start:</p>
+                    <ul>
+                        <li>Find your Location using coordinates</li>
+                        <li>Provide your data to the Form</li>
+                        <li>Submit your data and start to explore</li>
+                    </ul>
                 </InfoColumn>
                 <InfoColumn>
-                    <h1>Here is going to be an image</h1>
+                    <img src="/maplogo.svg" alt="image"/>
                 </InfoColumn>
             </InfoRow>
         </Section>   
@@ -29,6 +36,22 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 grid-gap: 30px;
 `
 const InfoColumn=styled.div`
-
 padding:30px;
+img{
+    width: 500px;
+    height: 300px;    
+}
+h1{
+    font-size:50px;
+    font-family: "Monaco"
+}
+
+p{
+    font-size:20px;
+}
+
+ul{
+    font-size:20px;
+}
 `
+

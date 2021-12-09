@@ -7,7 +7,7 @@ function NavBar(){
         <Wrapper>
             <Title>
                 <Icon/>
-                Maps
+                GeoTech Maps
             </Title>
         </Wrapper>
     )
