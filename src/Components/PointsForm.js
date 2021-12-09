@@ -62,7 +62,7 @@ function toggleButton(event){
 return(
     <div class ="container">
     {show? <form onSubmit={handleSubmit}>
-        <h2>Form</h2>
+        <h2>Start adding your points</h2>
         <div class="wrapper">
             <div class="box">
                 <input type="text" name="name" value={name} onChange={(event)=>setName(event.target.value)}/>
