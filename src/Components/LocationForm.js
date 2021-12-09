@@ -15,6 +15,7 @@ function LocationForm({onSetLocation}){
     return(
         <div>
             <form onSubmit={handleSetLocation}>
+            <h2>Yours coordinates:</h2>
             <div class="wrapper">
             <div class="box">
                 <input type="number" name="latitude" value={latitude} onChange={(event)=>setLatitude(event.target.value)}/>

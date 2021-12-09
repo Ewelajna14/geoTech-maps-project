@@ -22,7 +22,7 @@ function Map({points}){
     return(
         <div>
         <LocationForm onSetLocation={handleLocationFormSubmit}/>
-         <h1> Find your points here</h1>    
+         <h2> Find your points here</h2>    
         <MapContainer center={location} zoom={13} scrollWheelZoom={false}>
         <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
