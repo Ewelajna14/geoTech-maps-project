@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { MapContainer, TileLayer} from 'react-leaflet'
 import Point from './Point'
+import ChangeView from './ChangeView'
 import LocationForm from './LocationForm'
 
 //center={[41.64752113311525, -95.32354900194522]} 
@@ -12,8 +13,9 @@ function Map({points}){
     
 
     function handleLocationFormSubmit(newLocation){
+        let map = document.querySelector(".leaflet-container")
+        debugger;
         setLocation(newLocation)
-        console.log(newLocation)
         
         }
 
@@ -23,6 +25,7 @@ function Map({points}){
         <div>
         <LocationForm onSetLocation={handleLocationFormSubmit}/>   
         <MapContainer center={location} zoom={12} scrollWheelZoom={false}>
+        <ChangeView center={location} zoom={12} /> 
         <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
