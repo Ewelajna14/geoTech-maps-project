@@ -22,8 +22,8 @@ function NavBar(){
             </NavElement> 
 
             <NavElement>
-            <NavLink to="/form">
-             Form
+            <NavLink to="/maps">
+             Maps
             </NavLink>
             </NavElement>
 

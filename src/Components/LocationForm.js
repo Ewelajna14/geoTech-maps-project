@@ -15,24 +15,19 @@ function LocationForm({onSetLocation}){
 
     return(
         <Wrapper>
-            <form onSubmit={handleSetLocation}>
-            
+            <form onSubmit={handleSetLocation}>   
             <FormRow>
-            <FormColumn>
-            <h2>Yours coordinates:</h2>
-                <label for="number">Latitude</label>
-                <input type="number" name="latitude" value={latitude} onChange={(event)=>setLatitude(event.target.value)}/>
-                
-                <label for="number">Longitude</label>
-                <input type="number" name="longitude" value={longitude} onChange={(event)=>setLongitude(event.target.value)}/> 
-                </FormColumn>
-            </FormRow>
-            
-
+            <Title>Your Coordinates</Title>
+            <Element1>
+                <input type="number" name="latitude" value={latitude} onChange={(event)=>setLatitude(event.target.value)} placeholder="Type Lattitude"/>
+            </Element1>
+            <Element2>
+                <input type="number" name="longitude" value={longitude} onChange={(event)=>setLongitude(event.target.value)} placeholder="Type Longitude"/> 
+            </Element2>
             <FormButton>
                 <input type="submit" name="submit" value="Set Location"/>
             </FormButton>
-            
+            </FormRow>
             </form>
         </Wrapper>
     )
@@ -40,38 +35,48 @@ function LocationForm({onSetLocation}){
 
 export default LocationForm
 
+const Title = styled.h1`
+grid-column: 1/4;
+grid-row:1;
+`
+
 const FormRow=styled.div`
+width:100%;
 display:grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-grid-gap: 30px;
+grid-template-columns: repeat(12, 1fr);
+grid-gap: 20px;
 `
 
-const FormColumn=styled.div`
-padding:20px;
-label{
-    margin:10px;
-    font-weight:bold;
-}
-
+const Element1=styled.div`
+grid-column: 1/3;
+grid-row: 2;
 input{
-    border-radius: 25px;
-    border-color: black;
+    width:100%;
+    font-size:15px;
     background:transparent;
-    padding: 10px; 
+    padding: 5px; 
+    border-color: black;
 }
-
-h2{
-    font-size:30px;
-}
-
 `
-const FormButton = styled.div`
+
+const Element2=styled.div`
+grid-column: 3/5;
+grid-row: 2;
 input{
-  padding: 5px 5px;
+  width:100%;
   font-size:15px;
-  margin-left:100px;
-  margin-top: 5px;
-  border-radius: 12px;
+  background:transparent;
+  padding: 5px; 
+  border-color: black;
+  }
+`
+
+const FormButton = styled.div`
+grid-column: 1/2;
+grid-row: 3; 
+input{ 
+  font-size:15px;
+  border-radius: 10px;
   cursor: pointer;
   background:transparent;
 }
@@ -79,6 +84,9 @@ input{
 
 const Wrapper = styled.div`
 margin-bottom:20px;
+margin-top: 10px;
+margin-left:30px;
+
 `
 
 

@@ -20,6 +20,10 @@ export default Contacts
 
 const Wrapper = styled.div`
 background-color: #2f3e46;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
 `
 
 const ContactRow=styled.div`
@@ -29,7 +33,6 @@ grid-gap: 30px;
 `
 
 const ContactColumn=styled.div`
-padding:30px;
 p{
     color:white;
     font-size:20px;

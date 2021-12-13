@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Route} from "react-router-dom";
 import Map from './Map'
 import PointsForm from './PointsForm'
-import InfoSection from './InfoSection';
+import styled from 'styled-components';
 import '../App.css';
 
 function MapPage(){
@@ -20,15 +20,18 @@ function MapPage(){
   }, [])
  
     return(
-      <>
-        <InfoSection/>
-        <Route path="/form">
+      <Container>
         <PointsForm onAddPoint={handleAddPoint}/>
-        </Route>
         <Map class="leaflet-container" points={points}/>
-      </>
+      </Container>
     )
 }
 
 export default MapPage
 
+  const Container=styled.body`
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  background-color:#dad7cd;`
+  

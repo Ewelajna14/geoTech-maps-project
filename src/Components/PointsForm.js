@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import '../App.css';
 
 function PointsForm({onAddPoint}){
+const [show, setShow]=useState(false)    
 //form control state
 const[name, setName]=useState("")
 const[date, setDate]=useState("")
@@ -13,6 +14,15 @@ const[classification, setClassification]=useState("")
 const[counts, setCounts]=useState("")
 const[latitude, setLatitude]=useState("")
 const[longitude, setLongitude]=useState("")
+
+function toggleButton(event){
+    setShow(!show)
+    if(event.target.innerText === "Show Form"){
+        event.target.innerText = "Hide Form"
+    } else{ 
+        event.target.innerText = "Show Form"
+    }
+}
 
 function handleSubmit(event){
 event.preventDefault()
@@ -49,7 +59,7 @@ setLongitude("")
 
 return(
     <div class ="container">
-     <form onSubmit={handleSubmit}>
+    {show?<form onSubmit={handleSubmit}>
         <h2>Start adding your points</h2>
         <div class="wrapper">
             <div class="box">
@@ -110,9 +120,11 @@ return(
             <div class="box">
                 <input type="submit" name="submit" value="Add new point"/>
             </div>
-        
-         </form>
-          
+
+         </form>:null}
+
+          <button class="toggle-button" onClick={toggleButton}> Show Form
+          </button>
             
     </div>
     
