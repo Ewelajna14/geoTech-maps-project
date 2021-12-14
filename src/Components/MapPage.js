@@ -39,7 +39,10 @@ export default MapPage
 
   const Container=styled.body`
   box-sizing:border-box;
+  width:100vw;
   margin:0;
   padding:0;
-  background-image: linear-gradient(#F1F2B5,#135058 );`
+  background-image: linear-gradient(#F1F2B5,#135058 );
+  font-family: "Trattatello", cursive;
+  `
   

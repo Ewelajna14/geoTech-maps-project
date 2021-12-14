@@ -16,19 +16,17 @@ function LocationForm({onSetLocation}){
 
     return(
         <Wrapper>
-            <form onSubmit={handleSetLocation}>   
-            <FormRow>
-            <Title>Your Coordinates</Title>
-            <Element1>
+            <form onSubmit={handleSetLocation}>  
+            <Container>
+            <Title>Your Coordinates</Title> 
+            <InputContainer>
                 <input type="number" name="latitude" value={latitude} onChange={(event)=>setLatitude(event.target.value)} placeholder="Type Lattitude"/>
-            </Element1>
-            <Element2>
                 <input type="number" name="longitude" value={longitude} onChange={(event)=>setLongitude(event.target.value)} placeholder="Type Longitude"/> 
-            </Element2>
+            </InputContainer>
+            </Container>
             <FormButton>
                 <input type="submit" name="submit" value="Set Location"/>
             </FormButton>
-            </FormRow>
             </form>
         </Wrapper>
     )
@@ -39,47 +37,54 @@ export default LocationForm
 const Title = styled.h1`
 grid-column: 1/4;
 grid-row:1;
+font-size: 2.5rem;
 `
 
-const FormRow=styled.div`
+const Container = styled.div`
+display:flex;
+align-items:center;
+flex-direction:column;
+width:50vh;
+`
+
+const InputContainer = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+align-items:center;
+height:20%;
 width:100%;
-display:grid;
-grid-template-columns: repeat(12, 1fr);
-grid-gap: 20px;
-`
-
-const Element1=styled.div`
-grid-column: 1/3;
-grid-row: 2;
 input{
-    width:100%;
-    font-size:15px;
-    background:transparent;
-    padding: 5px; 
-    border-color: black;
+background: rgba(255, 255, 255, 0.15);
+border-radius: 15px;
+width 80%;
+height:2rem;
+padding 1rem;
+border:none;
+margin: 10px;
+outline:none;
+font-size:1rem;
+font-family: "Trattatello", cursive;
+font-weight:bold;
 }
 `
 
-const Element2=styled.div`
-grid-column: 3/5;
-grid-row: 2;
-input{
-  width:100%;
-  font-size:15px;
-  background:transparent;
-  padding: 5px; 
-  border-color: black;
-  }
-`
-
 const FormButton = styled.div`
-grid-column: 1/2;
-grid-row: 3; 
+margin:2rem;
+display:flex;
+align-items:left;
+justify-content:left;
+width:100%;
 input{ 
-  font-size:15px;
-  border-radius: 10px;
-  cursor: pointer;
-  background:transparent;
+    background: linear-gradient(to right, #76b852,#8DC26F );
+    text-transform:uppercase;
+    font-family: "Trattatello", cursive;
+    font-size:0.8rem;
+    width:20%;
+    height:2rem;
+    border-radius:15px;
+    border:none;
+    cursor: pointer;
 }
 `
 

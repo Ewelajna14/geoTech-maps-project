@@ -27,8 +27,9 @@ export default InfoSection
 
 const Section = styled.div`
 background-image: linear-gradient(#F1F2B5,#135058 );
-padding: 50px 0;
-height: 80vh;
+padding 5rem 0;
+height: 100vh;
+width:100vw;
 `
 
 const InfoRow=styled.div`
@@ -37,22 +38,26 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 grid-gap: 30px;
 `
 const InfoColumn=styled.div`
-padding:30px;
+margin:1rem;
 img{
-    width: 500px;
-    height: 300px;    
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 h1{
-    font-size:50px;
-    font-family: "Monaco"
+    font-size:3rem;
+    font-family: "Trattatello", cursive;
 }
 
 p{
-    font-size:20px;
+    font-size:1.4rem;
+    font-family: "Trattatello", cursive;
+    
 }
 
 ul{
-    font-size:20px;
+    font-size:1.4rem;
+    font-family: "Trattatello", cursive;
 }
 `
 

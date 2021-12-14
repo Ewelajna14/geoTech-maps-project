@@ -49,6 +49,7 @@ export default NavBar
 const Wrapper=styled.nav`
 background-color:#3A5A40;
 height:90px;
+width:100vw;
 display:flex;
 justify-content:left;
 align-items:center;
@@ -68,7 +69,8 @@ const NavMenu=styled.div`
 display:flex;
 justify-content:left;
 background-color:#3A5A40;
-padding:5px;
+padding:0.5rem;
+width:100vw;
 `
 
 const NavElement=styled.li`

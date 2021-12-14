@@ -17,10 +17,10 @@ const[longitude, setLongitude]=useState("")
 
 function toggleButton(event){
     setShow(!show)
-    if(event.target.innerText === "Show Form"){
-        event.target.innerText = "Hide Form"
+    if(event.target.innerText === "SHOW FORM"){
+        event.target.innerText = "HIDE FORM"
     } else{ 
-        event.target.innerText = "Show Form"
+        event.target.innerText = "SHOW FORM"
     }
 }
 
@@ -123,7 +123,7 @@ return(
 
          </form>:null}
 
-          <button class="toggle-button" onClick={toggleButton}> Show Form
+          <button class="toggle-button" onClick={toggleButton}> SHOW FORM
           </button>
             
     </div>

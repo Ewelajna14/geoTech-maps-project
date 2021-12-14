@@ -8,8 +8,8 @@ function Contacts(){
         <Wrapper>
             <ContactRow>
                 <ContactColumn>
-                  <p><Icon/>Call Us: ( 111-111-1111)</p>
-                 <p><IconEmail/>Send an Email: contact@contact.net</p>
+                  <Icon/><li>Call Us: ( 111-111-1111)</li>
+                  <IconEmail/><li>Send an Email: contact@contact.net</li>
                 </ContactColumn>
             </ContactRow>
         </Wrapper>
@@ -24,6 +24,8 @@ display: block;
   margin-left: auto;
   margin-right: auto;
   height: 80vh;
+  width:100vw;
+  height: 100vh;
 `
 
 const ContactRow=styled.div`
@@ -32,10 +34,15 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 grid-gap: 30px;
 `
 
-const ContactColumn=styled.div`
-p{
+const ContactColumn=styled.p`
     color:black;
-    font-size:20px;
+    font-size:1.5rem;
+    font-family: "Trattatello", cursive;
+    font-weight:bold;
+
+li{
+    list-style-type: none;
+    margin-left: 1rem;
 }
 `
 
