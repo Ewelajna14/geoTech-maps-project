@@ -28,7 +28,6 @@ function MapPage(){
  
     return(
       <Container>
-        
         <LocationForm onSetLocation={handleLocationFormSubmit}/>
         <PointsForm onAddPoint={handleAddPoint}/>
         <Map class="leaflet-container" points={points} location={location}/>
