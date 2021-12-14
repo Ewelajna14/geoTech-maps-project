@@ -1,29 +1,16 @@
-import React, {useState} from 'react'
+import React  from 'react'
 import { MapContainer, TileLayer} from 'react-leaflet'
 import Point from './Point'
 import ChangeView from './ChangeView'
-import LocationForm from './LocationForm'
-
-//center={[41.64752113311525, -95.32354900194522]} 
 
 
-function Map({points}){
+//let number=["41.972152", "-87.964213"]
 
-    const[location, setLocation] = useState(["41.64752113311525", "-95.32354900194522"])
-    
 
-    function handleLocationFormSubmit(newLocation){
-        let map = document.querySelector(".leaflet-container")
-        debugger;
-        setLocation(newLocation)
-        
-        }
-
-        let number=["41.972152", "-87.964213"]
+function Map({points, location}){
 
     return(
-        <div>
-        <LocationForm onSetLocation={handleLocationFormSubmit}/>   
+        <div>  
         <MapContainer center={location} zoom={12} scrollWheelZoom={false}>
         <ChangeView center={location} zoom={12} /> 
         <TileLayer

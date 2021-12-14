@@ -19,7 +19,7 @@ function Contacts(){
 export default Contacts
 
 const Wrapper = styled.div`
-background-color: #2f3e46;
+background-image: linear-gradient(#F1F2B5,#135058 );
 display: block;
   margin-left: auto;
   margin-right: auto;
@@ -34,7 +34,7 @@ grid-gap: 30px;
 
 const ContactColumn=styled.div`
 p{
-    color:white;
+    color:black;
     font-size:20px;
 }
 `

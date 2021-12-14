@@ -10,7 +10,8 @@ function LocationForm({onSetLocation}){
     e.preventDefault()    
     const newLocation=[latitude, longitude]
     onSetLocation(newLocation)
-    
+    setLatitude("")
+    setLongitude("")
     }
 
     return(
@@ -84,7 +85,6 @@ input{
 
 const Wrapper = styled.div`
 margin-bottom:20px;
-margin-top: 10px;
 margin-left:30px;
 
 `

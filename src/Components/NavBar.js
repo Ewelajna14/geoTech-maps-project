@@ -33,6 +33,12 @@ function NavBar(){
             </NavLink>
             </NavElement> 
 
+            <NavElement>  
+            <NavLink to="/login">
+             Log In
+            </NavLink>
+            </NavElement> 
+
             </NavMenu>
             </>
     )

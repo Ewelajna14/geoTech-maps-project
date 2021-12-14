@@ -26,8 +26,9 @@ function InfoSection(){
 export default InfoSection
 
 const Section = styled.div`
-background-color: #a3b18a;
+background-image: linear-gradient(#F1F2B5,#135058 );
 padding: 50px 0;
+height: 80vh;
 `
 
 const InfoRow=styled.div`
