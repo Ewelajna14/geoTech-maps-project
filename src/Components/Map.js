@@ -1,5 +1,6 @@
 import React  from 'react'
 import { MapContainer, TileLayer} from 'react-leaflet'
+import { ScaleControl } from 'react-leaflet'
 import Point from './Point'
 import ChangeView from './ChangeView'
 
@@ -13,6 +14,7 @@ function Map({points, location}){
         <div>  
         <MapContainer center={location} zoom={12} scrollWheelZoom={false}>
         <ChangeView center={location} zoom={12} /> 
+        <ScaleControl position="topleft" />
         <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -10,9 +10,9 @@ function InfoSection(){
                     <p> If you are looking for an App where you can track all of yours geotechnical data, together with displaying them on the map, you couldn't find better place! </p>
                     <p>To start:</p>
                     <ul>
-                        <li>Find your Location using coordinates</li>
-                        <li>Provide your data to the Form</li>
-                        <li>Submit your data and start to explore</li>
+                        <li>Find your Location using coordinates.</li>
+                        <li>Provide your data to the Form.</li>
+                        <li>Submit your data and start exploring.</li>
                     </ul>
                 </InfoColumn>
                 <InfoColumn>
