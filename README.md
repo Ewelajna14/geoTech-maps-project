@@ -32,6 +32,7 @@ Scroll down to see if you received expected result
 
 
 To add new point to the map containing geotechnical data:
+
 -Click on the button "SHOW FORM"
 
 -Start filling out form, with data collected during geotechnical surveying, latitude and longitude are crucial to mark your point on the map.
