@@ -21,10 +21,15 @@ USAGE
 To begin with klick on "Maps" on left top corner in NavBar.
 If you want to display different map, you have to know coordinates of area where geotechnical works were performed. 
 Provide your coordinates: 
+
 -Latitude in "Type Latitude" input 
--Longitude in "Type Longitude" input 
+
+-Longitude in "Type Longitude" input
+
 -Click "SET LOCATION" button
+
 Scroll down to see if you received expected result
+
 
 To add new point to the map containing geotechnical data:
 -Click on the button "SHOW FORM"
