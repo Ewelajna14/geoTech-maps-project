@@ -4,10 +4,6 @@ import { ScaleControl } from 'react-leaflet'
 import Point from './Point'
 import ChangeView from './ChangeView'
 
-
-//let number=["41.972152", "-87.964213"]
-
-
 function Map({points, location}){
 
     return(
