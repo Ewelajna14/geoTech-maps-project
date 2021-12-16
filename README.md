@@ -1,5 +1,5 @@
 
-Welcome to GeoTechMaps
+# Welcome to GeoTechMaps
 
 This project was created to display on the map geotechnical data collected during ground surveying. 
 This will help you to visiualize location of your boreholes. 
@@ -16,7 +16,7 @@ npm install
 3.Run app:
 npm start
 
-USAGE
+## USAGE
 
 To begin with klick on "Maps" on left top corner in NavBar.
 If you want to display different map, you have to know coordinates of area where geotechnical works were performed. 
