@@ -11,12 +11,12 @@ You will receive a clear picture, with scale and zoom option, which will help yo
 https://github.com/Ewelajna14/react-phase-2-project-maps
 
 2.Install NPM packages:
-npm install
+`npm install`
 
 3.Run app:
-npm start
+`npm start`
 
-## USAGE
+## Usage
 
 To begin with klick on "Maps" on left top corner in NavBar.
 If you want to display different map, you have to know coordinates of area where geotechnical works were performed. 
