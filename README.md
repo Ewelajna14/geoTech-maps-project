@@ -6,6 +6,7 @@ This will help you to visiualize location of your boreholes.
 You will receive a clear picture, with scale and zoom option, which will help you to track data and their spread. 
 
 INSTALLATION
+
 1.Clone the repo:
 https://github.com/Ewelajna14/react-phase-2-project-maps
 
@@ -16,6 +17,7 @@ npm install
 npm start
 
 USAGE
+
 To begin with klick on "Maps" on left top corner in NavBar.
 If you want to display different map, you have to know coordinates of area where geotechnical works were performed. 
 Provide your coordinates: 
