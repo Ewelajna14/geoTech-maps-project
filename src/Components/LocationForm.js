@@ -20,7 +20,7 @@ function LocationForm({onSetLocation}){
             <Container>
             <Title>Your Coordinates</Title> 
             <InputContainer>
-                <input type="number" name="latitude" value={latitude} onChange={(event)=>setLatitude(event.target.value)} placeholder="Type Lattitude"/>
+                <input type="number" name="latitude" value={latitude} onChange={(event)=>setLatitude(event.target.value)} placeholder="Type Latitude"/>
                 <input type="number" name="longitude" value={longitude} onChange={(event)=>setLongitude(event.target.value)} placeholder="Type Longitude"/> 
             </InputContainer>
             </Container>

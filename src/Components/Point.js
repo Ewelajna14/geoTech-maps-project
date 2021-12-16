@@ -8,7 +8,6 @@ const geoIcon =new Icon({
     iconSize: [35,35]})
 
 function Point ({points}){
-
     return(
         <>
         {
@@ -25,15 +24,11 @@ function Point ({points}){
                         <li>{"Classification: "+ point.classification}</li>
                         <li>{"Blow Counts: "+ point.blowCounts}</li>
                     </ul>
-               
                 </div>
                 </Popup>    
                 </Marker>
-                )    
-            })
-        }
+                ) }) }
         </>
-)
+        )
 }
-
 export default Point
