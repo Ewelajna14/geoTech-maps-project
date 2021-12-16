@@ -7,9 +7,6 @@ import LogIn from './LoginPage';
 import Contacts from './Contacts';
 import Footer from "./Footer"
 
-
-
-
 function App() {
   return (
     <div>
