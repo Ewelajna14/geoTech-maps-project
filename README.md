@@ -5,7 +5,7 @@ This project was created to display on the map geotechnical data collected durin
 This will help you to visiualize location of your boreholes. 
 You will receive a clear picture, with scale and zoom option, which will help you to track data and their spread. 
 
-INSTALLATION
+## Setup
 
 1.Clone the repo:
 https://github.com/Ewelajna14/react-phase-2-project-maps
